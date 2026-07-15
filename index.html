@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feierabend-Rechner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="perforation">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="eyebrow">Zeiterfassung · 8,4 h Tagessoll</div>
+    <h1>Feierabend-Rechner</h1>
+
+    <label for="startTime">Arbeitsbeginn</label>
+    <div class="input-row field-group">
+      <input type="time" id="startTime" step="60">
+    </div>
+
+    <label for="pauseInput">Pause (Minuten)</label>
+    <div class="input-row field-group">
+      <input type="number" id="pauseInput" min="0" step="1" placeholder="z. B. 30" value="0">
+    </div>
+
+    <button id="calcBtn">Calculate</button>
+    <div class="hint">Enter funktioniert auch.</div>
+
+    <div class="result" id="result" hidden>
+      <div class="track">
+        <div class="fill" id="fill"></div>
+        <div class="marker" id="marker"></div>
+      </div>
+
+      <div class="end-block">
+        <span class="end-label">Feierabend um</span>
+        <span class="end-time" id="endTimeVal">--:--</span>
+      </div>
+
+      <div class="remaining" id="remainingVal">–</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
